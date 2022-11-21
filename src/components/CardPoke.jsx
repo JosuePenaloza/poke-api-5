@@ -13,10 +13,13 @@ const CardPoke = ({url}) => {
 
     //console.log('un pokemon',pokemon)
     return (
-        <Link to={`/pokedex/${pokemon.id}/`}>
-            <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
-            <h1>{pokemon.name}</h1>
-        </Link>
+        <div className='cardPoke'>
+            <Link to={`/pokedex/${pokemon.id}/`}>
+                <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
+                <h1>{pokemon.name}</h1>
+            </Link>
+        </div>
+        
     );
 };
 

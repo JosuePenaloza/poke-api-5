@@ -42,7 +42,7 @@
 .pokeLis {
   display: grid;
   grid-gap: 1em;
-  grid-auto-rows: 12rem;
+  grid-auto-rows: 20rem;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   color: rgb(3, 3, 22);
 }
@@ -52,4 +52,27 @@
   height: 6rem;
   border:inset;
   border-radius: 8%;
+}
+
+.pokemonCard {
+  background-color: aqua;
+}
+
+.cardPoke {
+  background-image: url('./assets/img/pokederx3.jpg');
+
+  height: 20rem;
+  width: 11rem;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgb(0 0 0 / 30%);
+  text-decoration: none;
+  color: rgba(0,0,0,.8);
+}
+
+.buttonPage {
+  margin: 35px;
 }

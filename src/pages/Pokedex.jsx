@@ -20,6 +20,7 @@ const Pokedex = () => {
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/`)
         .then(res => setpokemons(res.data.results))
+        .catch(error => console.log(error.dat))
     }, []);
 
        //console.log('data',pokemons);
@@ -67,14 +68,6 @@ const Pokedex = () => {
             <h1>welcome coach {nameUser}</h1>
             <button onClick={() => navigate('/config')}>Config</button>
             <button onClick={() => navigate('/')}>Login</button>
-            <button disabled={pages === 1} onClick={() => setpage(pages-1)}>-</button>
-            {
-                numbers.map(number => (
-                    <button key={number} onClick={() => setpage(number)} >{number}</button>
-                ))
-            }
-            <button disabled={pages === totalPages} onClick={() => setpage(pages+1)}>+</button>
-            
             
             <select name="type" onChange={e => handlerType(e.target.value)}>
                 <option value="">Type</option>
@@ -94,6 +87,28 @@ const Pokedex = () => {
 
             <h2>Poke Dex</h2>
 
+            <section className='buttonPage'>
+                <button 
+                 disabled={pages === 1} 
+                 onClick={() => setpage(pages-1)}
+                >
+                    <i className="fa-solid fa-circle-arrow-left"></i>
+                </button>
+
+                {
+                    numbers.map(number => (
+                        <button key={number} onClick={() => setpage(number)} >{number}</button>
+                    ))
+                }
+
+                <button 
+                 disabled={pages === totalPages} 
+                 onClick={() => setpage(pages+1)}
+                >
+                    <i className="fa-solid fa-circle-arrow-right"></i>
+                </button>
+            </section>
+
             <div className='pokeLis' key={pokemons?.url}>
                 {
                     pokemonPaginated?.map(poke => (
@@ -104,6 +119,28 @@ const Pokedex = () => {
                     ))
                 }
             </div>
+
+            <section className='buttonPage'>
+                <button 
+                 disabled={pages === 1} 
+                 onClick={() => setpage(pages-1)}
+                >
+                    <i className="fa-solid fa-circle-arrow-left"></i>
+                </button>
+
+                {
+                    numbers.map(number => (
+                        <button key={number} onClick={() => setpage(number)} >{number}</button>
+                    ))
+                }
+
+                <button 
+                 disabled={pages === totalPages} 
+                 onClick={() => setpage(pages+1)}
+                >
+                    <i className="fa-solid fa-circle-arrow-right"></i>
+                </button>
+            </section>
         </div>
     );
 };
