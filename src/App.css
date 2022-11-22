@@ -1,6 +1,4 @@
 #root {
-
-
   text-align: center;
 }
 
@@ -39,6 +37,22 @@
   color: #888;
 }
 
+
+
+.login {
+ 
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.iconButton{
+  width: 10px;
+}
+
+.pokedex {
+  background-image: url('./assets/img/pokemon-list.png');
+}
+
 .pokeLis {
   display: grid;
   grid-gap: 1em;
@@ -55,7 +69,6 @@
 }
 
 .pokemonCard {
-  background-color: aqua;
   display: flex;
   justify-content: start;
   margin-right: auto;
@@ -63,6 +76,20 @@
   justify-items: center;
   position: relative;
 }
+
+.pokemonCard {
+  padding: 1.5em;
+  will-change: filter;
+}
+.pokemonCard:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.pokemonCard.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+
 
 .pokemonCard img {
   width: 7rem;
@@ -112,15 +139,19 @@
 }
 
 .poke_weigth_heigth {
+  background-color: yellow;
   position: fixed;
   left: 45%;
-  top: 45%;
+  top: 18%;
+  width: 35vh;
 }
 
 .poke_type {
+  background-color: rgb(25, 0, 255);
   position: fixed;
-  right: 86%;
-  top: 49%;
+  right: 70%;
+  top: 15%;
+  width: 19vh;
 }
 
 .poke_abilities {
@@ -131,14 +162,17 @@
 }
 
 .energy {
+  background-color: rgb(255, 0, 0);
   position: fixed;
-  top: 15%;
-  right: 85%;
+  top: 7%;
+  right: 70%;
   display: inline-grid;
   justify-items: start;
+  width: 18vh;
 }
 
 .movements {
+  background-color: rgb(202, 253, 16);
   position: sticky;
     left: 85%;
 }

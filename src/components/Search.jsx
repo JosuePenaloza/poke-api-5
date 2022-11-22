@@ -12,14 +12,12 @@ const Search = () => {
 
     return (
         <form onSubmit={handlerSubmit}>
-            <h2>Search</h2>
-            <label htmlFor="name">name</label>
             <input 
                 type="text" 
                 id="name" 
                 onChange={e => setSearch(e.target.value)}
                 value={search}    
-                placeholder='Name'
+                placeholder='Pokemon name'
             />
             <button>Search</button>
         </form>

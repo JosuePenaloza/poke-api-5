@@ -32,6 +32,9 @@ const Config = () => {
         <div>
             <b>CONFIG</b>
             <button onClick={() => navigate(-1)}><i className="fa-solid fa-arrow-left"></i></button>
+            <button onClick={() => navigate('/')}>Sign off</button>  
+
+
             <nav>
                 <button onClick={for4}>4</button>
                 <button onClick={for8}>8</button>

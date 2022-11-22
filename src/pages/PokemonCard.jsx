@@ -24,11 +24,9 @@ const PokemonCard = () => {
             </div>
             
             <div className='poke_weigth_heigth'>
-                <h2>
                 <h1>{pokemon.name}</h1>
                 <br/>
                 <b>weight: {pokemon.weight}</b>  <b>height: {pokemon.height}</b> 
-                </h2>
             </div>
 
             <div className='imgAndName'>
