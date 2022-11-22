@@ -18,35 +18,34 @@ const PokemonCard = () => {
 
     return (
         <div className='pokemonCard'>
-
-            <button onClick={() => navigate(-1)}><i className="fa-solid fa-arrow-left"></i></button>
-            <button onClick={() => navigate('/config')}>Config</button>
-
-            <div>
-                <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
-                <h1>{pokemon.name}</h1>
+            <div className='pokemonCardButton'>
+                <button onClick={() => navigate(-1)}><i className="fa-solid fa-arrow-left"></i></button>
+                <button onClick={() => navigate('/config')}>Config</button>
             </div>
             
-            <div>
-                <b>weight:</b> {pokemon.weight}
-                <b>height:</b> {pokemon.height}
+            <div className='poke_weigth_heigth'>
+                <h2>
+                <h1>{pokemon.name}</h1>
+                <br/>
+                <b>weight: {pokemon.weight}</b>  <b>height: {pokemon.height}</b> 
+                </h2>
             </div>
-            <div>
-                <b>Type:</b>
-                <section>
-                    {pokemon.types?.[0]?.type.name}
-                </section>
-                <section>
-                    {pokemon.types?.[1]?.type.name}
-                </section>
+
+            <div className='imgAndName'>
+                <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
             </div>
-            <div>
-                <b>Abilities:</b> 
+            
+            <div className='poke_type'>
+                <h4>
+                   Type: {pokemon.types?.[0]?.type.name} {pokemon.types?.[1]?.type.name}
+                </h4>
+
                 <section>
-                    {pokemon.abilities?.[0]?.ability.name}
-                </section>
-                <section>
-                    {pokemon.abilities?.[1]?.ability.name}
+                <h3>Abilities:</h3> 
+                    <b>
+                        {pokemon.abilities?.[0]?.ability.name} - {pokemon.abilities?.[1]?.ability.name}
+                    </b>
+                    
                 </section>
             </div>
 
@@ -65,7 +64,7 @@ const PokemonCard = () => {
                 <h3>Movements</h3>
                 {
                     pokemon.moves?.map(move => (
-                        <ul key={move.move.name}><li>{move.move.name}</li></ul>
+                        <ul key={move.move.name}><li><b>{move.move.name}</b></li></ul>
                     ))
                 }
             </section> 

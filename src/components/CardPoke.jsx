@@ -15,8 +15,13 @@ const CardPoke = ({url}) => {
     return (
         <div className='cardPoke'>
             <Link to={`/pokedex/${pokemon.id}/`}>
-                <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
-                <h1>{pokemon.name}</h1>
+                <div className='imgCar'>
+                    <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
+                </div>
+                <div className='namePokemon'>
+                    <h3>{pokemon.name}</h3>
+                </div>             
+                
             </Link>
         </div>
         

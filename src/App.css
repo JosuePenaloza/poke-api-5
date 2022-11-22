@@ -1,6 +1,6 @@
 #root {
-  margin: 0 auto;
-  padding: 2rem;
+
+
   text-align: center;
 }
 
@@ -56,6 +56,16 @@
 
 .pokemonCard {
   background-color: aqua;
+  display: flex;
+  justify-content: start;
+  margin-right: auto;
+  align-items: baseline;
+  justify-items: center;
+  position: relative;
+}
+
+.pokemonCard img {
+  width: 7rem;
 }
 
 .cardPoke {
@@ -71,8 +81,64 @@
   box-shadow: 2px 2px 8px rgb(0 0 0 / 30%);
   text-decoration: none;
   color: rgba(0,0,0,.8);
+
+  position: absolute;
 }
 
 .buttonPage {
   margin: 35px;
+}
+
+.imgCar {
+  position: relative;
+  top: 40%;
+}
+
+.namePokemon {
+  position: relative;
+  top: 46%;
+}
+
+.imgAndName {
+  position: fixed;
+  top: 11%;
+  left: 40%;
+
+}
+
+.pokemonCardButton {
+  position: fixed;
+  right: 88%;
+}
+
+.poke_weigth_heigth {
+  position: fixed;
+  left: 45%;
+  top: 45%;
+}
+
+.poke_type {
+  position: fixed;
+  right: 86%;
+  top: 49%;
+}
+
+.poke_abilities {
+  position: sticky;
+  right: 42%;
+  left: 10%;
+  top: 55%;
+}
+
+.energy {
+  position: fixed;
+  top: 15%;
+  right: 85%;
+  display: inline-grid;
+  justify-items: start;
+}
+
+.movements {
+  position: sticky;
+    left: 85%;
 }
