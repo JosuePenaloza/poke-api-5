@@ -14,6 +14,10 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+h1{
+  color: rgb(25, 0, 255);
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -48,6 +52,9 @@
 .iconButton{
   width: 10px;
 }
+.iconSearch{
+  width: 10px;
+}
 
 .pokedex {
   background-image: url('./assets/img/pokemon-list.png');
@@ -68,6 +75,7 @@
   border-radius: 8%;
 }
 
+
 .pokemonCard {
   display: flex;
   justify-content: start;
@@ -76,7 +84,6 @@
   justify-items: center;
   position: relative;
 }
-
 .pokemonCard {
   padding: 1.5em;
   will-change: filter;
@@ -89,6 +96,18 @@
 }
 
 
+
+
+.cardPoke {
+  height: 6em;
+  will-change: filter;
+}
+.cardPoke:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.cardPoke.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
 
 
 .pokemonCard img {

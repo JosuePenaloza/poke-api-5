@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Img from './Img';
+
 
 const Search = () => {
 
@@ -19,7 +21,7 @@ const Search = () => {
                 value={search}    
                 placeholder='Pokemon name'
             />
-            <button>Search</button>
+            <button><img src={Img.img5} alt="Search" className='iconSearch' /></button>
         </form>
     );
 };

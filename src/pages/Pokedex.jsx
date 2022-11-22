@@ -71,9 +71,9 @@ const Pokedex = () => {
                 <Search />
                 <button onClick={() => navigate('/config')}>Config</button>
             </div>
-            
+            <h1>welcome coach {nameUser}</h1>
             <div className='pokedex'>
-                <h1>welcome coach {nameUser}</h1>
+                
                 
                 <select name="type" onChange={e => handlerType(e.target.value)}>
                     <option value="">Type</option>
